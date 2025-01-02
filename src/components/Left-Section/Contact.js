@@ -10,7 +10,7 @@ const childVariants = {
 const Contact = () => {
     return (
         <div className="contact-info">
-            <h3 className="main-title" initial={{ scale: 0 }} animate={{ scale: 1}} transition={{delay: 1.3, duration: 1}}>Contact Info</h3>
+            <h3 className="main-title">Contact Info</h3>
             <ul>
                 <li><FaPhone className = "icon"/>678-908-7223</li>
                 <li><FaEnvelope className = "icon"/> jamesarmenda1128@gmail.com</li>
