@@ -1,44 +1,43 @@
-import React, {useEffect} from 'react';
-import './App.css'; // Global CSS
+import React, { useEffect } from 'react';
+import './App.css';
 
-// Left Section Imports
-import Profile from './components/Left-Section/Profile';
-import Skills from './components/Left-Section/Skills';
-import Contact from './components/Left-Section/Contact';
-import References from './components/Left-Section/References';
-
-// Right Section Imports
-import About from './components/Right-Section/About';
-import Projects from './components/Right-Section/Projects';
-import Education from './components/Right-Section/Education';
-import Leadership from './components/Right-Section/Leadership';
+// Component Imports
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import AboutSection from './components/AboutSection';
+import SkillsSection from './components/SkillsSection';
+import ExperienceSection from './components/ExperienceSection';
+import ProjectsSection from './components/ProjectsSection';
+import EducationSection from './components/EducationSection';
+import LeadershipSection from './components/LeadershipSection';
+import ContactSection from './components/ContactSection';
 
 const App = () => {
-    document.addEventListener('DOMContentLoaded', () => {
-        window.scrollTo(0, -document.body.getBoundingClientRect().top);
-    });
+    useEffect(() => {
+        // Smooth scroll behavior
+        document.documentElement.style.scrollBehavior = 'smooth';
+        
+        // Start at top on load
+        window.scrollTo(0, 0);
+
+        return () => {
+            document.documentElement.style.scrollBehavior = 'auto';
+        };
+    }, []);
 
     return (
-        <main className="main-content">
-            <section className="left-section">
-                <div className="left-content">
-                    <Profile />
-                    <Skills />
-                    <Contact />
-                    <References />
-                </div>
-            </section>
-
-            <section className="right-section">
-                <div class="right-content">
-                    <About />
-                    <Projects />
-                    <Education />
-                    <Leadership />
-                </div>
-            </section>
-        </main>
+        <div className="app">
+            <Navbar />
+            <Hero />
+            <AboutSection />
+            <SkillsSection />
+            <ExperienceSection />
+            <ProjectsSection />
+            <EducationSection />
+            <LeadershipSection />
+            <ContactSection />
+        </div>
     );
-}
+};
 
 export default App;
