@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { FaPhone, FaEnvelope, FaGithub, FaLinkedin, FaInstagram, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaGithub, FaLinkedin, FaInstagram, FaMapMarkerAlt, FaUser } from 'react-icons/fa';
 
 const ContactSection = () => {
     const ref = useRef(null);
@@ -8,8 +8,7 @@ const ContactSection = () => {
 
     const contactInfo = [
         { icon: <FaPhone />, label: "Phone", value: "678-908-7223", href: "tel:6789087223" },
-        { icon: <FaEnvelope />, label: "Email", value: "jamesarmenda1128@gmail.com", href: "mailto:jamesarmenda1128@gmail.com" },
-        { icon: <FaMapMarkerAlt />, label: "Address", value: "3920 Bogan Mill Rd", href: null }
+        { icon: <FaEnvelope />, label: "Email", value: "jamesarmenda1128@gmail.com", href: "mailto:jamesarmenda1128@gmail.com" }
     ];
 
     const socialLinks = [
@@ -113,7 +112,7 @@ const ContactSection = () => {
                     >
                         <h3>References</h3>
                         <div className="reference-card">
-                            <div className="reference-icon">👨‍🏫</div>
+                            <div className="reference-icon"><FaUser /></div>
                             <div className="reference-info">
                                 <h4>Dr. Aibek Musaev</h4>
                                 <p className="reference-title">Computer Science Professor</p>

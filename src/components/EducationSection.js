@@ -98,11 +98,6 @@ const EducationSection = () => {
                                         <li>Intro to Object-Oriented Programming</li>
                                         <li>Data Structures and Algorithms</li>
                                         <li>Human Dimensions of Cybersecurity</li>
-                                    </ul>
-                                </div>
-                                <div className="course-category in-progress">
-                                    <h5>In Progress:</h5>
-                                    <ul>
                                         <li>Computer Organization and Programming</li>
                                         <li>Objects and Design</li>
                                         <li>Computing and Society</li>

@@ -11,9 +11,9 @@ const SkillsSection = () => {
         { name: "Java", level: 75, icon: <FaJava />, color: "#007396" },
         { name: "JavaScript", level: 50, icon: <FaJsSquare />, color: "#f7df1e" },
         { name: "HTML/CSS", level: 70, icon: <FaHtml5 />, color: "#e34f26" },
-        { name: "React", level: 25, icon: <FaReact />, color: "#61dafb" },
-        { name: "C", level: 30, icon: <FaJava />, color: "#00599C" },
-        { name: "Assembly", level: 20, icon: <FaJava />, color: "#654FF0" }
+        { name: "React", level: 75, icon: <FaReact />, color: "#61dafb" },
+        { name: "C", level: 45, icon: <FaJava />, color: "#00599C" },
+        { name: "Assembly", level: 65, icon: <FaJava />, color: "#654FF0" }
     ];
 
     const softSkills = [
