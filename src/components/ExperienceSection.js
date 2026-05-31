@@ -1,83 +1,70 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
 
 const ExperienceSection = () => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const isInView = useInView(ref, { once: true, margin: '-80px' });
 
     const experiences = [
         {
-            title: "Gusto Team Member",
-            company: "Gusto",
-            location: "Atlanta, GA",
-            period: "May 2025 - August 2025",
-            color: "#e74c3c",
+            title: 'Peer Tutor',
+            company: 'Knack Tutoring — Georgia Tech',
+            location: 'Atlanta, GA',
+            period: 'Feb. 2026 – Present',
             responsibilities: [
-                "Demonstrated adaptability and teamwork in a high-volume, fast-paced environment, efficiently preparing meals while collaborating with peers and leadership.",
-                "Maintained stable operations during peak hours by working independently on the line, ensuring timely and accurate order completion.",
-                "Utilized strong communication skills to coordinate inventory needs across stations (line, drive-thru, grill, and prep), optimizing workflow and minimizing delays."
+                'Maintained a 4.96-star rating across 30+ sessions with 15 students, accumulating 38 hours of instruction in Computer Science and Calculus II.',
+                'Qualified to tutor 7 courses across multiple disciplines, demonstrating consistent subject mastery and strong academic performance.',
+                'Designed student-centered explanations of complex technical concepts, adapting teaching strategies to individual learning needs.'
+            ]
+        },
+        {
+            title: 'Teaching Assistant',
+            company: 'Georgia Institute of Technology',
+            location: 'Atlanta, GA',
+            period: '2026 – Present',
+            responsibilities: [
+                'Supporting students in Intro to Computing, helping bridge foundational concepts in programming and computational thinking.',
+                'Facilitating a collaborative and approachable learning environment for incoming CS students.'
+            ]
+        },
+        {
+            title: 'Team Member',
+            company: 'Gusto',
+            location: 'Atlanta, GA',
+            period: 'May – Aug. 2025',
+            responsibilities: [
+                'Performed reliably in a high-volume environment, completing orders accurately and on time during peak hours with minimal supervision.',
+                'Coordinated inventory and workflow across line, grill, prep, and drive-thru stations, improving cross-station communication and reducing delays.'
             ]
         }
     ];
-
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: { staggerChildren: 0.2 }
-        }
-    };
-
-    const itemVariants = {
-        hidden: { opacity: 0, x: -50 },
-        visible: {
-            opacity: 1,
-            x: 0,
-            transition: { duration: 0.6 }
-        }
-    };
 
     return (
         <section id="experience" className="section experience-section" ref={ref}>
             <div className="section-container">
                 <motion.div
                     className="section-header"
-                    initial={{ opacity: 0, y: 50 }}
+                    initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="section-title">Work Experience</h2>
-                    <div className="title-underline"></div>
+                    <div className="section-label">03 — Experience</div>
+                    <h2 className="section-title">Work History</h2>
                 </motion.div>
 
-                <motion.div
-                    className="experience-timeline"
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate={isInView ? "visible" : "hidden"}
-                >
-                    {experiences.map((exp, index) => (
+                <div className="experience-timeline">
+                    {experiences.map((exp, i) => (
                         <motion.div
-                            key={index}
+                            key={i}
                             className="experience-card"
-                            variants={itemVariants}
-                            whileHover={{ scale: 1.02 }}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={isInView ? { opacity: 1, y: 0 } : {}}
+                            transition={{ duration: 0.5, delay: i * 0.15 }}
                         >
-                            <div className="experience-header" style={{ background: exp.color }}>
-                                <motion.div
-                                    className="experience-icon"
-                                    animate={{ rotate: [0, 5, -5, 0] }}
-                                    transition={{ duration: 3, repeat: Infinity }}
-                                >
-                                    <FaBriefcase />
-                                </motion.div>
-                            </div>
-
                             <div className="experience-body">
+                                <div className="experience-eyebrow">{exp.company}</div>
                                 <h3 className="experience-title">{exp.title}</h3>
-                                <h4 className="experience-company">{exp.company}</h4>
-                                
                                 <div className="experience-meta">
                                     <div className="meta-item">
                                         <FaCalendarAlt />
@@ -88,27 +75,25 @@ const ExperienceSection = () => {
                                         <span>{exp.location}</span>
                                     </div>
                                 </div>
-
                                 <ul className="experience-responsibilities">
-                                    {exp.responsibilities.map((resp, i) => (
+                                    {exp.responsibilities.map((r, j) => (
                                         <motion.li
-                                            key={i}
-                                            initial={{ opacity: 0, x: -20 }}
+                                            key={j}
+                                            initial={{ opacity: 0, x: -10 }}
                                             animate={isInView ? { opacity: 1, x: 0 } : {}}
-                                            transition={{ duration: 0.5, delay: 0.2 * (i + 1) }}
+                                            transition={{ duration: 0.4, delay: i * 0.15 + j * 0.1 + 0.2 }}
                                         >
-                                            {resp}
+                                            {r}
                                         </motion.li>
                                     ))}
                                 </ul>
                             </div>
                         </motion.div>
                     ))}
-                </motion.div>
+                </div>
             </div>
         </section>
     );
 };
 
 export default ExperienceSection;
-

@@ -1,43 +1,38 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { FaGraduationCap, FaMapMarkerAlt, FaCalendarAlt, FaStar } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaCalendarAlt, FaStar } from 'react-icons/fa';
 
 const EducationSection = () => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const isInView = useInView(ref, { once: true, margin: '-80px' });
+
+    const courses = [
+        'OOP', 'Data Structures & Algorithms', 'Computer Organization & Programming',
+        'Objects & Design', 'Systems & Networks', 'Human Dimensions of Cybersecurity'
+    ];
 
     return (
         <section id="education" className="section education-section" ref={ref}>
             <div className="section-container">
                 <motion.div
                     className="section-header"
-                    initial={{ opacity: 0, y: 50 }}
+                    initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6 }}
                 >
+                    <div className="section-label">05 — Education</div>
                     <h2 className="section-title">Education</h2>
-                    <div className="title-underline"></div>
                 </motion.div>
 
                 <motion.div
                     className="education-card"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                    transition={{ duration: 0.8 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.7, delay: 0.1 }}
                 >
-                    <div className="education-header">
-                        <motion.div
-                            className="education-icon"
-                            animate={{ rotate: [0, 5, -5, 0] }}
-                            transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
-                        >
-                            <FaGraduationCap />
-                        </motion.div>
-                    </div>
-
                     <div className="education-content">
                         <h3 className="education-school">Georgia Institute of Technology</h3>
-                        
+
                         <div className="education-info">
                             <div className="info-item">
                                 <FaMapMarkerAlt />
@@ -45,87 +40,64 @@ const EducationSection = () => {
                             </div>
                             <div className="info-item">
                                 <FaCalendarAlt />
-                                <span>2024 - Present</span>
+                                <span>2024 – Present · Est. May 2028</span>
                             </div>
                         </div>
 
                         <div className="education-degree">
-                            <h4>Bachelor of Science in Computer Science</h4>
-                            <p className="degree-status">(In Progress)</p>
+                            <h4>B.S. Computer Science</h4>
+                            <p className="degree-status">In Progress</p>
                         </div>
 
                         <div className="education-details">
                             <motion.div
                                 className="detail-item"
-                                initial={{ opacity: 0, x: -20 }}
+                                initial={{ opacity: 0, x: -15 }}
                                 animate={isInView ? { opacity: 1, x: 0 } : {}}
-                                transition={{ duration: 0.5, delay: 0.3 }}
+                                transition={{ duration: 0.4, delay: 0.3 }}
                             >
-                                <span className="detail-label">Concentration:</span>
-                                <span className="detail-value">Intelligence & Cybersecurity and Privacy</span>
+                                <span className="detail-label">Concentrations</span>
+                                <span className="detail-value">Systems and Architecture &amp; Cybersecurity and Privacy</span>
                             </motion.div>
 
                             <motion.div
                                 className="detail-item gpa-highlight"
-                                initial={{ opacity: 0, x: -20 }}
+                                initial={{ opacity: 0, x: -15 }}
                                 animate={isInView ? { opacity: 1, x: 0 } : {}}
-                                transition={{ duration: 0.5, delay: 0.5 }}
+                                transition={{ duration: 0.4, delay: 0.45 }}
                             >
-                                <FaStar className="gpa-star" />
-                                <span className="detail-label">GPA:</span>
-                                <motion.span
-                                    className="detail-value gpa-value"
-                                    animate={{ scale: [1, 1.1, 1] }}
-                                    transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
-                                >
-                                    3.35
-                                </motion.span>
-                                <FaStar className="gpa-star" />
+                                <span className="detail-value">GPA</span>
+                                <span className="gpa-value">3.50</span>
                             </motion.div>
                         </div>
 
                         <motion.div
                             className="courses-section"
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 15 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ duration: 0.5, delay: 0.7 }}
+                            transition={{ duration: 0.5, delay: 0.6 }}
                         >
-                            <h4 className="courses-title">Relevant Courses</h4>
+                            <h4 className="courses-title">Relevant Coursework</h4>
                             <div className="courses-grid">
                                 <div className="course-category">
-                                    <h5>Completed:</h5>
                                     <ul>
-                                        <li>Intro to Object-Oriented Programming</li>
-                                        <li>Data Structures and Algorithms</li>
-                                        <li>Human Dimensions of Cybersecurity</li>
-                                        <li>Computer Organization and Programming</li>
-                                        <li>Objects and Design</li>
-                                        <li>Computing and Society</li>
+                                        {courses.map((c, i) => (
+                                            <li key={i}>{c}</li>
+                                        ))}
                                     </ul>
                                 </div>
                             </div>
                         </motion.div>
 
                         <div className="education-highlights">
-                            <motion.div
-                                className="highlight"
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                                transition={{ duration: 0.5, delay: 0.7 }}
-                                whileHover={{ scale: 1.05 }}
-                            >
-                                <span className="highlight-icon">🎯</span>
-                                <span>Focus: AI Development</span>
+                            <motion.div className="highlight" whileHover={{ scale: 1.03 }}>
+                                <span>AI Development</span>
                             </motion.div>
-                            <motion.div
-                                className="highlight"
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                                transition={{ duration: 0.5, delay: 0.9 }}
-                                whileHover={{ scale: 1.05 }}
-                            >
-                                <span className="highlight-icon">🔒</span>
-                                <span>Focus: Cybersecurity</span>
+                            <motion.div className="highlight" whileHover={{ scale: 1.03 }}>
+                                <span>Cybersecurity</span>
+                            </motion.div>
+                            <motion.div className="highlight" whileHover={{ scale: 1.03 }}>
+                                <span>Systems</span>
                             </motion.div>
                         </div>
                     </div>
@@ -136,4 +108,3 @@ const EducationSection = () => {
 };
 
 export default EducationSection;
-
