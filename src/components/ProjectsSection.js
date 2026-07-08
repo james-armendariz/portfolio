@@ -13,7 +13,7 @@ const ProjectsSection = () => {
             subtitle: 'College Discovery Platform',
             date: 'Feb. 2026',
             role: 'Full-Stack Developer',
-            description: 'Full-stack platform featuring user profiles, saved lists, alumni reviews, and admin analytics. Built a data pipeline using Pandas and scikit-learn to clean College Scorecard data and generate a hybrid matching engine combining weighted cosine similarity with Groq LLM explanations. Includes a financial planner covering cost/ROI analysis, loan simulation, and budget tracking.',
+            description: 'Built a full-stack platform (React/TypeScript + Vite, FastAPI/SQLAlchemy, PostgreSQL) with 48 REST endpoints and 8 relational models powering user profiles, saved lists, alumni reviews, and admin analytics. Developed a data pipeline (Pandas, scikit-learn) that cleaned and merged College Scorecard data (6,400+ institutions, 3,300+ raw fields) with 18,600+ alumni ratings into a normalized 3,700-institution matching dataset. Implemented a hybrid matching engine blending weighted cosine similarity (80%) with profile affinity scoring (20%), paired with LLM-generated explanations and a deterministic fallback. Added a financial planner module with 4 engines for cost/ROI analysis, loan simulation, budget tracking, and alternative school comparison.',
             icon: <FaReact />,
             tags: ['React', 'TypeScript', 'FastAPI', 'Python', 'PostgreSQL', 'scikit-learn']
         },
@@ -22,16 +22,16 @@ const ProjectsSection = () => {
             subtitle: 'Job Search Web Application',
             date: 'Aug. – Dec. 2025',
             role: 'Full-Stack Developer (Scrum Team)',
-            description: 'Collaborated in a 6-person Scrum team to deliver a full-stack Django application with role-based workflows, map-based job search, and client-side radius filtering. Built a Kanban application tracker and applied SOLID/GRASP design principles with iterative refactoring for a scalable, maintainable codebase.',
+            description: 'Collaborated in a 6-person Scrum team across 3 sprints and 144 commits to deliver a full-stack Django application with role-based workflows, Leaflet-powered map-based job search, and real-time client-side radius filtering. Built a 5-stage drag-and-drop Kanban application tracker backed by a REST API, applying SOLID/GRASP design principles through reusable role-based decorators and iterative schema refactoring across 30 migrations.',
             icon: <SiDjango />,
             tags: ['Django', 'Python', 'JavaScript', 'Scrum / Agile', 'SOLID']
         },
         {
             title: 'Autonomous Blimp',
             subtitle: 'ROS 2 State Machine — VIP Research',
-            date: '2025 – Present',
+            date: 'Jan. 2026 – Present',
             role: 'Research Developer',
-            description: 'Developing and testing a state machine for an autonomous blimp platform, including a mock vision publisher to simulate sensor input for hardware-free testing. Implemented keyboard-triggered test commands mapped to named threshold constants for repeatable integration tests.',
+            description: 'Developed and tested a 9-state, 13-transition finite state machine in ROS 2 (C++) for an autonomous blimp platform, including a mock vision publisher in Python to simulate sensor input for hardware-free testing. Implemented 3 keyboard-triggered test commands mapped to named threshold constants mirrored from the main control header (e.g., BALL_CATCH_TRIGGER, GOAL_SCORE_TRIGGER), enabling repeatable integration tests across all 9 autonomous states.',
             icon: <FaRobot />,
             tags: ['ROS 2', 'Python', 'C++', 'State Machines', 'Robotics']
         },

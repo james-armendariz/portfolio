@@ -8,7 +8,8 @@ const EducationSection = () => {
 
     const courses = [
         'OOP', 'Data Structures & Algorithms', 'Computer Organization & Programming',
-        'Objects & Design', 'Systems & Networks', 'Human Dimensions of Cybersecurity'
+        'Objects & Design', 'Systems & Networks', 'Design of Operating Systems',
+        'Human Dimensions of Cybersecurity'
     ];
 
     return (

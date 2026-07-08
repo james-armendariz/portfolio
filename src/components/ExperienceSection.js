@@ -10,22 +10,22 @@ const ExperienceSection = () => {
         {
             title: 'Peer Tutor',
             company: 'Knack Tutoring — Georgia Tech',
-            location: 'Atlanta, GA',
+            location: 'Atlanta, GA (Hybrid)',
             period: 'Feb. 2026 – Present',
             responsibilities: [
-                'Maintained a 4.96-star rating across 30+ sessions with 15 students, accumulating 38 hours of instruction in Computer Science and Calculus II.',
-                'Qualified to tutor 7 courses across multiple disciplines, demonstrating consistent subject mastery and strong academic performance.',
-                'Designed student-centered explanations of complex technical concepts, adapting teaching strategies to individual learning needs.'
+                'Maintained a 4.96-star rating across 25 reviews while delivering 34 sessions and 39 hours of instruction to 16 Georgia Tech students.',
+                'Tutor Georgia Tech students in Introduction to Computing and Computer Organization & Programming, with occasional support in Calculus II — qualified across 7 courses through demonstrated subject mastery.',
+                'Designed student-centered explanations of complex technical concepts, adapting teaching strategies to individual learning needs to improve comprehension.'
             ]
         },
         {
             title: 'Teaching Assistant',
             company: 'Georgia Institute of Technology',
             location: 'Atlanta, GA',
-            period: '2026 – Present',
+            period: 'May – Aug. 2026',
             responsibilities: [
-                'Supporting students in Intro to Computing, helping bridge foundational concepts in programming and computational thinking.',
-                'Facilitating a collaborative and approachable learning environment for incoming CS students.'
+                'Moderated the primary technical support forum (Ed Discussion) for 300+ students, including undergraduate, graduate, and high school dual-enrollment participants.',
+                'Guided students through foundational programming concepts — introductory object-oriented programming in Python, recursion, I/O, conditionals, loops, and string manipulation — via virtual help desk sessions to build problem-solving skills.'
             ]
         },
         {

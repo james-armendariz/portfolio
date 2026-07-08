@@ -8,7 +8,7 @@ const AboutSection = () => {
     const cards = [
         {
             title: 'Academic Background',
-            body: 'Computer Science student at Georgia Tech pursuing concentrations in Intelligence and Cybersecurity & Privacy. Maintaining a 3.50 GPA with a focus on building rigorous foundations in systems, algorithms, and applied AI.'
+            body: 'Computer Science student at Georgia Tech pursuing concentrations in Systems & Architecture and Cybersecurity & Privacy. Maintaining a 3.50 GPA with a focus on building rigorous foundations in systems, algorithms, and applied AI.'
         },
         {
             title: 'Career Goals',

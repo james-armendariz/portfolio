@@ -21,7 +21,8 @@ const SkillsSection = () => {
 
     const tools = [
         'Git / GitHub', 'ROS 2', 'PostgreSQL', 'SQLAlchemy',
-        'Pandas', 'scikit-learn', 'Matplotlib', 'Scrum / Agile'
+        'Pandas', 'scikit-learn', 'Matplotlib', 'Scrum / Agile',
+        'Processor Design', 'SOLID / GRASP'
     ];
 
     const softSkills = [
