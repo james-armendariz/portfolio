@@ -1,43 +1,39 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { MotionConfig } from 'framer-motion';
 import './App.css';
 
-// Component Imports
-import Navbar from './components/Navbar';
+import Nav from './components/Nav';
+import CursorRing from './components/CursorRing';
 import Hero from './components/Hero';
-import AboutSection from './components/AboutSection';
-import SkillsSection from './components/SkillsSection';
-import ExperienceSection from './components/ExperienceSection';
-import ProjectsSection from './components/ProjectsSection';
-import EducationSection from './components/EducationSection';
-import LeadershipSection from './components/LeadershipSection';
-import ContactSection from './components/ContactSection';
+import Intro from './components/Intro';
+import WorkIndex from './components/WorkIndex';
+import Rinse from './components/Rinse';
+import Sniffer from './components/Sniffer';
+import Blimp from './components/Blimp';
+import MoreWork from './components/MoreWork';
+import About from './components/About';
+import LineUp from './components/LineUp';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
-const App = () => {
-    useEffect(() => {
-        // Smooth scroll behavior
-        document.documentElement.style.scrollBehavior = 'smooth';
-        
-        // Start at top on load
-        window.scrollTo(0, 0);
-
-        return () => {
-            document.documentElement.style.scrollBehavior = 'auto';
-        };
-    }, []);
-
-    return (
-        <div className="app">
-            <Navbar />
+const App = () => (
+    <MotionConfig reducedMotion="user">
+        <Nav />
+        <CursorRing />
+        <main className="page">
             <Hero />
-            <AboutSection />
-            <SkillsSection />
-            <ExperienceSection />
-            <ProjectsSection />
-            <EducationSection />
-            <LeadershipSection />
-            <ContactSection />
-        </div>
-    );
-};
+            <Intro />
+            <WorkIndex />
+            <Rinse />
+            <Sniffer />
+            <Blimp />
+            <MoreWork />
+            <About />
+            <LineUp />
+            <Contact />
+        </main>
+        <Footer />
+    </MotionConfig>
+);
 
 export default App;
